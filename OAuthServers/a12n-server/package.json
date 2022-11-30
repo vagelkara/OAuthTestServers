@@ -1,0 +1,113 @@
+{
+  "name": "@curveball/a12n-server",
+  "version": "0.20.2",
+  "main": "dist/index.js",
+  "description": "A ready-to-launch User and Authentication system for those that don't want to build it",
+  "scripts": {
+    "prepublishOnly": "make build",
+    "test": "make lint test",
+    "tsc": "tsc",
+    "start": "node ./dist/app.js",
+    "start:watch": "tsc-watch --onSuccess 'node dist/app.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curveball/a12n-server.git"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "dist",
+    "LICENSE",
+    "assets",
+    "templates"
+  ],
+  "contributors": [
+    {
+      "name": "Evert Pot",
+      "email": "evert@badgateway.net",
+      "url": "https://evertpot.com"
+    },
+    {
+      "name": "Ju-Hang Sin",
+      "email": "ju@badgateway.net",
+      "url": "https://juhangsin.net"
+    },
+    {
+      "name": "Matthew Mihok",
+      "email": "matthew@mihok.systems",
+      "url": "https://mihok.systems"
+    }
+  ],
+  "homepage": "https://github.com/curveball/a12n-server#readme",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/chai": "^4.2.15",
+    "@types/chai-as-promised": "^7.1.3",
+    "@types/geoip-lite": "^1.4.1",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.26",
+    "@types/nodemailer": "^6.4.1",
+    "@types/qrcode": "^1.4.0",
+    "@types/redis": "^2.8.32",
+    "@types/sinon": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.0.1",
+    "hal-types": "^1.7.6",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
+    "sinon": "^14.0.0",
+    "ts-node": "^10.0.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "types": "dist/",
+  "nyc": {
+    "extension": [
+      ".ts"
+    ]
+  },
+  "dependencies": {
+    "@curveball/accesslog": "^0.2.1",
+    "@curveball/bodyparser": "^0.4.14",
+    "@curveball/browser": "^0.17.4",
+    "@curveball/controller": "^0.3.0",
+    "@curveball/core": "^0.19.0",
+    "@curveball/cors": "^0.1.0",
+    "@curveball/http-errors": "^0.4.0",
+    "@curveball/links": "^0.1.5",
+    "@curveball/problem": "^0.3.0",
+    "@curveball/router": "^0.3.0",
+    "@curveball/session": "^0.6.2",
+    "@curveball/session-redis": "^0.4.1",
+    "@curveball/validator": "^0.8.0",
+    "@simplewebauthn/browser": "^5.2.1",
+    "@simplewebauthn/server": "^5.2.1",
+    "bcrypt": "^5.0.1",
+    "csv-stringify": "^6.0.5",
+    "dotenv": "^16.0.0",
+    "geoip-lite": "^1.0.10",
+    "handlebars": "^4.7.7",
+    "jose": "^4.6.1",
+    "knex": "^2.0.0",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.5.0",
+    "otplib": "^12.0.1",
+    "pg": "^8.7.1",
+    "qrcode": "^1.3.2",
+    "sqlite3": "^5.0.6"
+  },
+  "mocha": {
+    "require": "ts-node/register",
+    "recursive": true,
+    "extension": [
+      "ts",
+      "js",
+      "tsx"
+    ]
+  }
+}

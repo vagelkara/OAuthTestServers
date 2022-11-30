@@ -1,0 +1,6 @@
+/keys/omejdn/*
+/keys/clients/*
+!/keys/.gitkeep
+/config/*
+/omejdn_priv.*
+/.bundle

@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2021",
+
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        "experimentalDecorators": true,
+        "noUnusedLocals": true,
+
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "src/types/*"
+            ]
+        },
+        "lib": [
+          "DOM",
+          "ES2021"
+        ],
+        "declaration": true
+    },
+    "ts-node": {
+      "files": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

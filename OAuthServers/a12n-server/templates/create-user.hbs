@@ -1,0 +1,37 @@
+<form action="{{ action }}" method="post">
+
+  {{# if msg}}
+  <div class="msg info">{{ msg }}</div>
+  {{/if}}
+  {{# if error}}
+  <div class="msg error">{{ error }}</div>
+  {{/if}}
+
+  <fieldset>
+    <label for="nickname">
+      <span>Nickname</span>
+      <input type="text" name="nickname" id="nickname" required="required" autocomplete="nickname" autofocus />
+    </label>
+
+    <label for="identity">
+      <span>Identity (unique URL identifying this user)</span>
+      <input type="url" name="identity" id="identity" required="required" autocomplete="url" />
+    </label>
+
+    <label for="active" class="checkbox">
+      <span>Activate user account immediately</span>
+      <input type="checkbox" name="active" id="active" value="1">
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <label>
+      <button type="submit">Create New User</button>
+    </label>
+  </fieldset>
+
+  {{#each hiddenFields}}
+  <input type="hidden" name="{{@key}}" value="{{this}}"/>
+  {{/each}}
+
+</form>
